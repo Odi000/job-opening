@@ -1,0 +1,20 @@
+nav {
+    position: fixed;
+    top: -67px;
+    background-color: #3A3632;
+    width: 100%;
+    z-index: 1;
+    transition: top .3s ease-out;
+}
+
+nav img {
+    margin: 0 auto;
+    width: fit-content;
+    display: block;
+    width: 210px;
+    pointer-events: none;
+}
+
+.descend {
+    top: 0px;
+}

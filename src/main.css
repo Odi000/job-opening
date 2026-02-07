@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'mini-pixel', sans-serif;
+}
+
+:root {
+    background-color: #1E1E1E;
+}
+
+body {
+    position: relative;
+}
