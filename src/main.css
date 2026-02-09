@@ -1,16 +1,63 @@
+@font-face {
+    font-family: 'Oracle Sans';
+    src: url('./assets/fonts/OracleSans-UltraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oracle Sans';
+    src: url('./assets/fonts/OracleSans-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oracle Sans';
+    src: url('./assets/fonts/OracleSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oracle Sans';
+    src: url('./assets/fonts/OracleSans-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oracle Sans';
+    src: url('./assets/fonts/OracleSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 *,
 *::after,
 *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'mini-pixel', sans-serif;
+    font-family: 'Oracle Sans', Arial, sans-serif;
 }
 
 :root {
     background-color: #1E1E1E;
+    --bold-color: #312D2A;
+    --regular-color: #1D1C1B;
+    --link-color: #00678A;
+    --icons-filter: invert(43%) sepia(16%) saturate(436%) hue-rotate(160deg) brightness(97%) contrast(94%);
+    --icons-filter-filled: invert(43%) sepia(21%) saturate(709%) hue-rotate(55deg) brightness(99%) contrast(82%);
+    overflow-x: hidden;
 }
 
 body {
     position: relative;
+    /* overflow: hidden; */
 }

@@ -7,7 +7,7 @@ nav {
     transition: top .3s ease-out;
 }
 
-nav img {
+nav .oracle {
     margin: 0 auto;
     width: fit-content;
     display: block;
@@ -15,6 +15,28 @@ nav img {
     pointer-events: none;
 }
 
+.decoration {
+    position: fixed;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    min-width: 800px;
+    height: 80px;
+    opacity: 0;
+    transition: opacity 1s linear;
+    z-index: -1;
+}
+
+.decoration.show {
+    opacity: .35;
+}
+
 .descend {
     top: 0px;
+}
+
+@media (max-width: 450px) {
+    .decoration {
+        height: 69px;
+    }
 }
