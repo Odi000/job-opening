@@ -162,26 +162,27 @@ function FirstSlide({ handleStarClick, starWasClicked, setApply, setMessage }) {
 function Spinner({ setSecondSlide }) {
     useEffect(() => {
         setTimeout(() => setSecondSlide(true), 1200)
-        preloadImages();
 
-        const preloadImages = async () => {
-            const imageUrls = [
-                '/chevron.png',
-                '/star-filled.png'
-            ];
+        // const preloadImages = async () => {
+        //     const imageUrls = [
+        //         '/chevron.png',
+        //         '/star-filled.png'
+        //     ];
 
-            const loadPromises = imageUrls.map((src) => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.src = src;
-                    img.onload = resolve;
-                    img.onerror = resolve;
-                });
-            });
+        //     const loadPromises = imageUrls.map((src) => {
+        //         return new Promise((resolve) => {
+        //             const img = new Image();
+        //             img.src = src;
+        //             img.onload = resolve;
+        //             img.onerror = resolve;
+        //         });
+        //     });
 
-            await Promise.allSettled(loadPromises);
-            await new Promise(resolve => setTimeout(resolve, 400));
-        };
+        //     await Promise.allSettled(loadPromises);
+        //     await new Promise(resolve => setTimeout(resolve, 400));
+        // };
+
+        // preloadImages();
     }, []);
 
     return (
