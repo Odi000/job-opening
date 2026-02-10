@@ -49,6 +49,7 @@
 
 :root {
     background-color: #1E1E1E;
+    --paper-bkg-color: #ededed;
     --bold-color: #312D2A;
     --regular-color: #1D1C1B;
     --link-color: #00678A;

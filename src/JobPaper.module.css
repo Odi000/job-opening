@@ -21,19 +21,22 @@
 }
 
 .show {
-    top: 32vh;
+    top: 30vh;
 }
 
 .paper {
-    background-color: #efefef;
+    position: relative;
+    background-color: var(--paper-bkg-color)
+        /*#efefef*/
+    ;
     width: 70%;
     padding: 30px;
     border-radius: 4px;
     font-size: 14px;
     font-weight: 300;
     margin: 0 auto 40px;
+    transition: height .3s ease-in;
 }
-
 
 .top {
     display: flex;
@@ -194,6 +197,118 @@ li .normal {
     width: 85%;
 }
 
+/*---Spinner---*/
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--regular-color);
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin .6s linear infinite;
+    margin: 100px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*------SecondSilde------*/
+
+.secondSlide .title {
+    margin-bottom: 78px;
+}
+
+.chevron {
+    position: absolute;
+    width: 100%;
+    bottom: 18px;
+    left: 0;
+}
+
+.chevronContainer {
+    cursor: pointer;
+    width: fit-content;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.chevron img {
+    width: 80px;
+    height: 24px;
+    filter: var(--icons-filter);
+}
+
+.chevronContainer:hover img {
+    filter: invert(95%) sepia(4%) saturate(16%) hue-rotate(182deg) brightness(105%) contrast(105%);
+    ;
+}
+
+.tasks {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tasks ul {
+    background-color: #dddddd;
+    list-style: square;
+    padding: 24px 30px;
+    font-size: 16px;
+    letter-spacing: .5px;
+}
+
+.tasks ul:hover {
+    background-color: #d4d4d4;
+}
+
+.tasks li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tasks li .bolder {
+    font-weight: 600;
+    text-wrap: nowrap;
+}
+
+.secondSlide .apply {
+    margin: 50px auto 20px;
+    transition:
+        opacity .3s linear,
+        color .3s linear;
+}
+
+.greyedOut {
+    opacity: .6;
+    color: grey;
+}
+
+.greyedOut.apply:hover {
+    box-shadow: none;
+}
+
+/*--end--*/
+
+/*------ThirdSilde------*/
+
+.thirdSlide.title {
+    margin: 35px auto 35px;
+}
+
+/*--end--*/
+
 @media (max-width: 1220px) {
     .paper {
         width: 90%;
@@ -216,6 +331,16 @@ li .normal {
     .content {
         padding: 0 10px;
     }
+
+    .tasks ul {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .tasks {
+        width: 90%;
+    }
 }
 
 @media (max-width: 560px) {
@@ -228,8 +353,9 @@ li .normal {
     .show {
         top: 18vh;
     }
-    
+
     .paper {
+        min-height: 290px;
         width: 100%;
         padding: 14px 10px;
         margin: 0;
@@ -239,7 +365,7 @@ li .normal {
         width: 20px;
     }
 
-    .moreJobs p{
+    .moreJobs p {
         font-size: 13px;
         padding-top: 1px;
     }
@@ -249,7 +375,15 @@ li .normal {
     }
 
     li .bold {
-    width: 210px;
-    flex: 0 0 210px
-}
+        width: 210px;
+        flex: 0 0 210px
+    }
+
+    .tasks {
+        width: 100%;
+    }
+
+    .secondSlide .title {
+        margin-bottom: 52px;
+    }
 }
