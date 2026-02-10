@@ -248,7 +248,10 @@ function SecondSlide({ handleStarClick, starWasClicked, setApply2, setMessage })
                             styles.apply :
                             styles.apply + ' ' + styles.greyedOut
                         }
-                        onClick={() => setApply2(true)}
+                        onClick={() => {
+                            if (!(completed.one && completed.two)) return;
+                            setApply2(true)
+                        }}
                     >
                         CONTINUE
                     </button>
